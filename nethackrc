@@ -1,0 +1,12 @@
+# === OPTIONS ===
+# character
+# OPTIONS=race:elf
+# appearance
+OPTIONS=color,hilite_pet,lit_corridor,menucolors,boulder:8
+OPTIONS=showexp,showscore,time
+OPTIONS=msg_window:f,sortloot=loot,disclose:+i+a+v+g+c
+# controls
+OPTIONS=autodig,!autopickup
+# names
+OPTIONS=catname:Morris,dogname:Fido,fruit:slime mold.  You die..
+
