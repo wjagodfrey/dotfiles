@@ -28,8 +28,8 @@ echo ""
 echo "Moving any existing dotfiles from ~ to $olddir"
 for file in $files; do
     # move dotfiles that are not symlinks into $olddir
-    if [ ! \( -h ~/.$file \) ]; then
-        echo "moving existing file to $olddir";
+    if [ ! \( -h ~/.$file \) &&  ]; then
+        echo "moving existing $file to $olddir";
         mv -f ~/.$file $olddir/.$file
     else
         echo "removing existing symlink";
@@ -39,4 +39,13 @@ for file in $files; do
     echo "";
     ln -s $dir/$file ~/.$file
 done
+
+if [ ! \( -e ~/.vim/bundle/Vundle.vim \) ]; then
+    echo "cloning Vundle"
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+fi
+
+echo "installing Vundle plugins"
+vim +PluginInstall +qall
+
 echo "complete"
