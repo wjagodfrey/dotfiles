@@ -27,6 +27,7 @@ Plugin 'Shougo/vimproc.vim'
 Plugin 'terryma/vim-expand-region'
 Plugin 'dkprice/vim-easygrep'
 Plugin 'isRuslan/vim-es6'
+Plugin 'digitaltoad/vim-jade'
 
 " UI
 Plugin 'bling/vim-airline'
@@ -57,8 +58,6 @@ call vundle#end()
 
 " Set the theme
 colorscheme vimbrant
-" set background=light
-
 
 " -- Options --
 
