@@ -184,8 +184,8 @@ xmap <space> <leader>
 " -- Shortcuts --
 
 " allow easier buffer switching
-noremap <C-}> :bnext<CR>
-noremap <C-{> :bprevious<CR>
+noremap <C-m> :bnext<CR>
+noremap <C-n> :bprevious<CR>
 
 " kj to exit insert mode and save
 inoremap kj <Esc>:w<CR>
@@ -194,11 +194,14 @@ inoremap kj <Esc>:w<CR>
 nmap <leader>fef ggVG=
 
 " close buffer
-nmap <leader>x :q<CR>
+nmap <leader>q :bw<CR>
 
 " FZF
-noremap <c-p> :FZF<CR>
+noremap <C-p :FZF<CR>
 let g:fzf_source = 'find . -type f | grep -v "node_modules/"'
+
+" Toggle tabbed indents
+nmap <leader>l :set list!<CR>
 
 " Use v to expand region
 vmap v <Plug>(expand_region_expand)
@@ -210,10 +213,6 @@ nmap <leader>t :TagbarToggle<CR>
 " insert lines without entering insert mode
 noremap <leader>o o<Esc>k
 noremap <leader>O O<Esc>j
-
-" Run specs
-noremap <BS> :call RunCurrentSpecFile()<CR>
-noremap \ :call RunNearestSpec()<CR>
 
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
