@@ -197,7 +197,7 @@ nmap <leader>fef ggVG=
 nmap <leader>q :bw<CR>
 
 " FZF
-noremap <C-p :FZF<CR>
+noremap <C-p> :FZF<CR>
 let g:fzf_source = 'find . -type f | grep -v "node_modules/"'
 
 " Toggle tabbed indents
