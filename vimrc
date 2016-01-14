@@ -39,6 +39,7 @@ Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'roman/golden-ratio'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'eiginn/netrw'
 
 " Git
 Plugin 'tpope/vim-fugitive'
@@ -254,3 +255,6 @@ nmap <silent> <leader>d <Plug>DashSearch
 
 " Allow . in visual mode
 vnoremap . :norm.<CR>
+
+" netrw split toggle
+noremap <Leader><Tab> :Lexplore<CR>
