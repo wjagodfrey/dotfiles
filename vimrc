@@ -29,6 +29,7 @@ Plugin 'dkprice/vim-easygrep'
 Plugin 'isRuslan/vim-es6'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'StanAngeloff/php.vim'
+Plugin 'phalkunz/vim-ss'
 
 " UI
 Plugin 'bling/vim-airline'
