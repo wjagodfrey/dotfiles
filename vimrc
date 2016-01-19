@@ -41,6 +41,7 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'roman/golden-ratio'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'eiginn/netrw'
+Plugin 'terryma/vim-multiple-cursors'
 
 " Git
 Plugin 'tpope/vim-fugitive'
@@ -187,9 +188,11 @@ xmap <space> <leader>
 " -- Shortcuts --
 
 " allow easier buffer switching
-noremap <C-m> :bnext<CR>
-noremap <C-n> :bprevious<CR>
+noremap <C-w> :bnext<CR>
+noremap <C-q> :bprevious<CR>
 
+" jj to exit insert mode
+inoremap jj <Esc>
 " kj to exit insert mode and save
 inoremap kj <Esc>:w<CR>
 
