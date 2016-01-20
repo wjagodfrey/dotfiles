@@ -132,7 +132,7 @@ set undolevels=10000
 " Show tabs
 :set listchars=tab:▸-,
 
-"Invisible character colors 
+"Invisible character colors
 autocmd VimEnter,Colorscheme * :hi NonText ctermfg=0
 autocmd VimEnter,Colorscheme * :hi SpecialKey ctermfg=0
 
@@ -198,6 +198,9 @@ inoremap kj <Esc>:w<CR>
 
 " format the entire file
 nmap <leader>fef ggVG=
+
+" strip whitespace
+nmap <leader>sws :StripWhitespace<CR>
 
 " close buffer
 nmap <leader>q :bw<CR>
