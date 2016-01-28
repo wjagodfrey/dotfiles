@@ -87,6 +87,7 @@ set smartcase
 set expandtab
 set tabstop=4
 set shiftwidth=4
+set wrap
 
 " Splits
 set splitright
@@ -130,7 +131,8 @@ end
 set undolevels=10000
 
 " Show tabs
-:set listchars=tab:▸-,
+set listchars=tab:▸-,
+set list
 
 "Invisible character colors
 autocmd VimEnter,Colorscheme * :hi NonText ctermfg=0
