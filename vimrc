@@ -151,6 +151,9 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=235
 " netrw config
 let g:netrw_liststyle=3
 
+" configure NERDTree
+let NERDTreeIgnore=['node_modules$[[dir]]', '\~$']
+
 " vim-spec options
 let g:rspec_command = ':call Send_to_Tmux("spec {spec}\n")'
 
