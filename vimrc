@@ -30,6 +30,7 @@ Plugin 'isRuslan/vim-es6'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'phalkunz/vim-ss'
+Plugin 'pbrisbin/vim-mkdir'
 
 " UI
 Plugin 'bling/vim-airline'
@@ -42,6 +43,8 @@ Plugin 'roman/golden-ratio'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'eiginn/netrw'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 " Git
 Plugin 'tpope/vim-fugitive'
@@ -265,5 +268,5 @@ nmap <silent> <leader>d <Plug>DashSearch
 " Allow . in visual mode
 vnoremap . :norm.<CR>
 
-" netrw split toggle
-noremap <Leader><Tab> :Lexplore<CR>
+" NERDTree toggle
+noremap <Leader><Tab> :NERDTreeToggle<CR>
