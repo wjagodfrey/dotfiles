@@ -272,3 +272,6 @@ vnoremap . :norm.<CR>
 
 " NERDTree toggle
 noremap <Leader><Tab> :NERDTreeToggle<CR>
+
+" Make it easier to save with sudo
+cmap w!! w !sudo tee > /dev/null %
