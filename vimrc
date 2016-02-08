@@ -21,6 +21,7 @@ Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-commentary'
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'ervandew/supertab'
 Plugin 'Shougo/vimproc.vim'
@@ -48,17 +49,6 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 " Git
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
-
-" Tmux
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'jgdavey/tslime.vim'
-Plugin 'tmux-plugins/vim-tmux-focus-events'
-Plugin 'sjl/vitality.vim'
-
-Plugin 'dermusikman/sonicpi.vim'
-
-" Documentation
-Plugin 'rizzatti/dash.vim'
 
 call vundle#end()
 
@@ -126,9 +116,9 @@ set wildmenu
 
 " Extend our undoable steps and preserve over restart (if available)
 if has('persistent_undo')
-  set undodir=$TMPDIR,~/tmp,~/.vim/tmp,/tmp,/var/tmp
-  set undofile
-  set undoreload=10000
+    set undodir=$TMPDIR,~/tmp,~/.vim/tmp,/tmp,/var/tmp
+    set undofile
+    set undoreload=10000
 end
 set undolevels=10000
 
@@ -153,9 +143,6 @@ let g:netrw_liststyle=3
 " configure NERDTree
 let NERDTreeIgnore=['node_modules$[[dir]]', '\~$']
 
-" vim-spec options
-let g:rspec_command = ':call Send_to_Tmux("spec {spec}\n")'
-
 " Syntastic
 let g:syntastic_mode_map = { 'mode': 'passive' }
 let g:syntastic_javascript_checkers = ['standard']
@@ -173,13 +160,6 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let g:auto_save = 1  " enable AutoSave
 let g:auto_save_in_insert_mode = 0
 let g:auto_save_silent = 1  " do not display the auto-save notification
-
-"Command t
-let g:CommandTMaxHeight = 25
-let g:CommandTFileScanner = 'watchman'
-
-"Navigator
-let g:tmux_navigator_save_on_switch = 1
 
 " Indent lines
 let g:indentLine_color_term = 000
@@ -200,11 +180,9 @@ noremap <C-q> :bprevious<CR>
 
 " jj to exit insert mode
 inoremap jj <Esc>
-" kj to exit insert mode and save
-inoremap kj <Esc>:w<CR>
 
-" format the entire file
-nmap <leader>fef ggVG=
+" format the entire file, using the f mark to move back to the same position
+nmap <leader>fef mfggVG=`f
 
 " strip whitespace
 nmap <leader>sws :StripWhitespace<CR>
@@ -237,35 +215,15 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 " Restore the enter key in the quick fix panel
 autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
 
-" Add a ruler at 80 characters
-" augroup BgHighlight
-"     autocmd!
-"     autocmd WinEnter * set colorcolumn=80
-"     autocmd WinLeave * set colorcolumn=0
-" augroup END
-
 " Save on focus lost
 au FocusLost * silent! wa
 
-nmap <leader><leader> :call Send_to_Tmux("tst\n")<cr>
 nmap <leader>w :w <cr>
 
 noremap <leader>e :e! <cr>
 
-" Autocomplete tags
-iabbrev </<leader> </<C-X><C-O>
-
-" Add a semicolon to end of line when pressing ;
-nmap ; A;kj
-
-" Add a comma to end of line when pressing ,
-nmap , A,kj
-
-" Set async completion.
-let g:monster#completion#rcodetools#backend = "async_rct_complete"
-
-" Search dash
-nmap <silent> <leader>d <Plug>DashSearch
+" Add a colon when semicolon is pressed. Save us a keypress.
+nmap ; :
 
 " Allow . in visual mode
 vnoremap . :norm.<CR>
