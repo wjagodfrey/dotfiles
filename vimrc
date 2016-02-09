@@ -33,6 +33,7 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'phalkunz/vim-ss'
 Plugin 'pbrisbin/vim-mkdir'
+Plugin 'dag/vim-fish'
 
 " UI
 Plugin 'bling/vim-airline'
@@ -44,11 +45,11 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 " Git
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 call vundle#end()
 
