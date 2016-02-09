@@ -28,7 +28,7 @@ echo ""
 echo "Moving any existing dotfiles from ~ to $olddir"
 for file in $files; do
     # move dotfiles that are not symlinks into $olddir
-    if [ ! \( -h ~/.$file \) &&  ]; then
+    if [ ! \( -h ~/.$file \) ]; then
         echo "Moving existing file ~/.$file to $olddir";
         mv -f ~/.$file $olddir/.$file
     # or remove old symlinks to be safe
@@ -86,5 +86,8 @@ fi
 # Install Vundle plugins
 echo "Installing Vundle plugins"
 vim +PluginInstall +qall
+
+# Link fish config
+bash ./fish/install.sh
 
 echo "^^^^COMPLETE^^^^"
