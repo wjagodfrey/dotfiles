@@ -29,11 +29,11 @@ echo "Moving any existing dotfiles from ~ to $olddir"
 for file in $files; do
     # move dotfiles that are not symlinks into $olddir
     if [ ! \( -h ~/.$file \) &&  ]; then
-        echo "moving existing file ~/.$file to $olddir";
+        echo "Moving existing file ~/.$file to $olddir";
         mv -f ~/.$file $olddir/.$file
     # or remove old symlinks to be safe
     else
-        echo "removing existing symlink ~/.$file";
+        echo "Removing existing symlink ~/.$file";
         rm -f ~/.$file
     fi
     echo "Creating symlink to .$file in ~"
@@ -41,14 +41,50 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
+
+echo "Installing Homebrew kegs"
+
+brewKegs="fish
+macvim --with-override-system-vim
+node
+ruby
+fzf
+slurm
+htop
+iftop
+cmake
+ngrok
+mcrypt
+openssl
+graphviz
+mongodb
+postgres
+dos2unix
+the_silver_searcher"
+
+brew install $brewKegs
+
+echo "Setting up mongodb launch agent"
+ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents
+launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist
+
+echo "Setting up postgres launch agent"
+ln -sfv /usr/local/opt/postgresql/*.plist ~/library/launchagents
+launchctl load ~/library/launchagents/homebrew.mxcl.postgresql.plist
+
+echo "Setting up fish as default shell"
+grep -q -F '/usr/local/bin/fish' /etc/shells || echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
+chsh -s /usr/local/bin/fish
+
+
 # Install Vundle if it doesn't exist
 if [ ! \( -e ~/.vim/bundle/Vundle.vim \) ]; then
-    echo "cloning Vundle"
+    echo "Cloning Vundle"
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 fi
 
 # Install Vundle plugins
-echo "installing Vundle plugins"
+echo "Installing Vundle plugins"
 vim +PluginInstall +qall
 
-echo "complete"
+echo "^^^^COMPLETE^^^^"
