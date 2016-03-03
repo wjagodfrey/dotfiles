@@ -34,6 +34,7 @@ Plugin 'StanAngeloff/php.vim'
 Plugin 'phalkunz/vim-ss'
 Plugin 'pbrisbin/vim-mkdir'
 Plugin 'dag/vim-fish'
+Plugin 'kennethzfeng/vim-raml'
 
 " UI
 Plugin 'bling/vim-airline'
