@@ -46,6 +46,7 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
 
 " Git
 Plugin 'tpope/vim-fugitive'
@@ -146,8 +147,10 @@ let g:netrw_liststyle=3
 let NERDTreeIgnore=['node_modules$[[dir]]', '\~$']
 
 " Syntastic
-let g:syntastic_mode_map = { 'mode': 'passive' }
-let g:syntastic_javascript_checkers = ['standard']
+let g:syntastic_mode_map = { 'mode': 'active' }
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
 
 "airline
 let g:airline_powerline_fonts = 1
