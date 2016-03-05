@@ -60,6 +60,7 @@ graphviz
 mongodb
 postgres
 dos2unix
+coreutils
 the_silver_searcher"
 
 brew install $brewKegs
