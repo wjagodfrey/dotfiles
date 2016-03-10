@@ -147,10 +147,8 @@ let g:netrw_liststyle=3
 let NERDTreeIgnore=['node_modules$[[dir]]', '\~$']
 
 " Syntastic
-let g:syntastic_mode_map = { 'mode': 'active' }
+let g:syntastic_mode_map = { 'mode': 'passive' }
 let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
 
 "airline
 let g:airline_powerline_fonts = 1
@@ -191,6 +189,9 @@ nmap <leader>fef mfggVG=`f
 
 " strip whitespace
 nmap <leader>sws :StripWhitespace<CR>
+
+" check syntax with syntastic
+nmap <leader>scs :SyntasticCheck<CR>
 
 " close buffer
 nmap <leader>q :bw<CR>
