@@ -42,3 +42,8 @@ for file in $files; do
     ln -s $filedir/$file $installdir/$file
 done
 
+# Install fundle
+mkdir -p ~/.config/fish/functions
+curl https://raw.githubusercontent.com/tuvistavie/fundle/master/functions/fundle.fish -o ~/.config/fish/functions/fundle.fish
+
+fish -c 'fundle install'

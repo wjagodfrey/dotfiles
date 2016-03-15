@@ -35,6 +35,8 @@ Plugin 'phalkunz/vim-ss'
 Plugin 'pbrisbin/vim-mkdir'
 Plugin 'dag/vim-fish'
 Plugin 'kennethzfeng/vim-raml'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'othree/html5.vim'
 
 " UI
 Plugin 'bling/vim-airline'
@@ -149,6 +151,21 @@ let NERDTreeIgnore=['node_modules$[[dir]]', '\~$']
 " Syntastic
 let g:syntastic_mode_map = { 'mode': 'passive' }
 let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_html_tidy_ignore_errors = [
+            \ 'trimming empty <i>',
+            \ 'trimming empty <span>',
+            \ '<input> proprietary attribute \"autocomplete\"',
+            \ 'proprietary attribute \"role\"',
+            \ 'proprietary attribute \"hidden\"',
+            \ 'proprietary attribute \"ng-',
+            \ '<svg> is not recognized!',
+            \ 'discarding unexpected <svg>',
+            \ 'discarding unexpected </svg>',
+            \ '<rect> is not recognized!',
+            \ 'discarding unexpected <rect>'
+            \ ]
 
 "airline
 let g:airline_powerline_fonts = 1

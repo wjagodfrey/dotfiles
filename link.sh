@@ -91,4 +91,7 @@ vim +PluginInstall +qall
 # Link fish config
 bash ./fish/install.sh
 
+# install nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
+
 echo "^^^^COMPLETE^^^^"
