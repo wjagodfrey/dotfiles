@@ -195,6 +195,9 @@ xmap <space> <leader>
 
 " -- Shortcuts --
 
+" remap <C-w> to <C-s>
+noremap <C-s> <C-w>
+
 " allow easier buffer switching
 noremap <C-w> :bnext<CR>
 noremap <C-q> :bprevious<CR>
