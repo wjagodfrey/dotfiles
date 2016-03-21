@@ -61,6 +61,7 @@ mongodb
 postgres
 dos2unix
 coreutils
+aspell
 the_silver_searcher"
 
 brew install $brewKegs
