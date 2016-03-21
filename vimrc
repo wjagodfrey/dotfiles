@@ -49,6 +49,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
+Plugin 'mikelue/vim-maven-plugin'
 
 " Git
 Plugin 'tpope/vim-fugitive'
