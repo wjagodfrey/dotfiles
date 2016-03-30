@@ -197,6 +197,7 @@ xmap <space> <leader>
 
 " remap <C-w> to <C-s>
 noremap <C-s> <C-w>
+noremap <C-s><C-q> <C-w><C-q>
 
 " allow easier buffer switching
 noremap <C-w> :bnext<CR>
