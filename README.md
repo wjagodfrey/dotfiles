@@ -3,10 +3,16 @@
 
 ## Installation
 
+You will need xcode, and xcode commandline tools.
+
 To set up a fresh computer without `git` or `brew`, run the following commands:
+
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
 ```
 bash
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install git
 git clone https://github.com/wjagodfrey/dotfiles.git ~/dotfiles
 bash ~/dotfiles/link.sh
