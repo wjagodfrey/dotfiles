@@ -53,7 +53,6 @@ slurm
 htop
 iftop
 cmake
-ngrok
 mcrypt
 openssl
 graphviz
