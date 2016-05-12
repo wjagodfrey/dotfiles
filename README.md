@@ -3,7 +3,13 @@
 
 ## Installation
 
-You will need xcode, and xcode commandline tools.
+You will need xcode, and xcode commandline tools. Onse they are installed, run:
+
+```
+sudo xcodebuild -license
+```
+
+And agree to the terms.
 
 To set up a fresh computer without `git` or `brew`, run the following commands:
 
