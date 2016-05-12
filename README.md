@@ -3,7 +3,7 @@
 
 ## Installation
 
-You will need xcode, and xcode commandline tools. Onse they are installed, run:
+You will need xcode, and xcode commandline tools. Once they are installed, run:
 
 ```
 sudo xcodebuild -license
