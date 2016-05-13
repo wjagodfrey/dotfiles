@@ -95,4 +95,11 @@ bash ./fish/install.sh
 # install nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
 
+# set nvm version
+nvm install 6.1
+nvm use 6.1
+
+# Install global npm modules
+bash ./npm/install.sh
+
 echo "^^^^COMPLETE^^^^"
