@@ -13,3 +13,5 @@ fundle plugin 'edc/bass'
 
 fundle init
 
+# iterm2 3.0 shell integration
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
