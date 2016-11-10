@@ -6,6 +6,9 @@
 
 npmModules="jshint
 jslint
+eslint
+nodemon
+vtop
 markserv"
 
 npm i -g $npmModules
