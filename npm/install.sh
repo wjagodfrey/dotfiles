@@ -5,6 +5,7 @@
 ############################
 
 npmModules="jshint
+jslint
 markserv"
 
 npm i -g $npmModules

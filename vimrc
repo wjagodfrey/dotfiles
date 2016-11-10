@@ -37,6 +37,7 @@ Plugin 'dag/vim-fish'
 Plugin 'kennethzfeng/vim-raml'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'othree/html5.vim'
+Plugin 'godlygeek/tabular'
 
 " UI
 Plugin 'bling/vim-airline'
@@ -151,7 +152,7 @@ let NERDTreeIgnore=['node_modules$[[dir]]', '\~$']
 
 " Syntastic
 let g:syntastic_mode_map = { 'mode': 'passive' }
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_html_tidy_ignore_errors = [
@@ -214,6 +215,9 @@ nmap <leader>sws :StripWhitespace<CR>
 
 " check syntax with syntastic
 nmap <leader>scs :SyntasticCheck<CR>
+
+" align equals, with tabular
+nmap <leader>tbt :Tabularize /=/l2r1<CR>
 
 " close buffer
 nmap <leader>q :bw<CR>
