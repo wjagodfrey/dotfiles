@@ -155,6 +155,7 @@ let g:syntastic_mode_map = { 'mode': 'passive' }
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
+let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_html_tidy_ignore_errors = [
             \ 'trimming empty <i>',
             \ 'trimming empty <span>',
@@ -215,6 +216,9 @@ nmap <leader>sws :StripWhitespace<CR>
 
 " check syntax with syntastic
 nmap <leader>scs :SyntasticCheck<CR>
+nmap <leader>scc :ll<CR>
+nmap <leader>scd :lnext<CR>
+nmap <leader>sca :lprev<CR>
 
 " align equals, with tabular
 nmap <leader>tbt :Tabularize /=/l2r1<CR>
@@ -223,7 +227,7 @@ nmap <leader>tbt :Tabularize /=/l2r1<CR>
 nmap <leader>q :bw<CR>
 
 " FZF
-noremap <C-p> :FZF<CR>
+noremap <C-p> :FZF!<CR>
 let g:fzf_source = 'find . -type f | grep -v "node_modules/"'
 
 " Toggle tabbed indents
