@@ -61,7 +61,8 @@ postgres
 dos2unix
 coreutils
 aspell
-the_silver_searcher"
+the_silver_searcher
+jq"
 
 brew install $brewKegs
 
