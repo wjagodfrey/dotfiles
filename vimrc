@@ -62,11 +62,6 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 call vundle#end()
 
-" Set the theme
-colorscheme vimbrant
-
-" -- Options --
-
 " No wrapping please
 set nowrap
 
