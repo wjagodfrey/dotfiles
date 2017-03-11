@@ -13,6 +13,14 @@ files="config.fish functions"                      	# list of files/folders to s
 
 ##########
 
+echo "Installing and configuring fish"
+
+########## Installation
+
+brew install fish
+
+##########
+
 # create $cachedir
 echo "Creating $cachedir for backup of any existing fish configs in $installdir"
 mkdir -p $cachedir
@@ -47,3 +55,7 @@ mkdir -p ~/.config/fish/functions
 curl https://raw.githubusercontent.com/tuvistavie/fundle/master/functions/fundle.fish -o ~/.config/fish/functions/fundle.fish
 
 fish -c 'fundle install'
+
+echo "Setting up fish as default shell"
+grep -q -F '/usr/local/bin/fish' /etc/shells || echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
+chsh -s /usr/local/bin/fish
