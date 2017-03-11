@@ -44,6 +44,7 @@ Plugin 'mtscout6/syntastic-local-eslint.vim'
 
 " UI
 Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'majutsushi/tagbar'
 Plugin 'ap/vim-css-color'
 Plugin 'AnsiEsc.vim'
@@ -170,6 +171,7 @@ let g:syntastic_html_tidy_ignore_errors = [
 
 "airline
 let g:airline_powerline_fonts = 1
+let g:airline_theme='badwolf'
 
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
