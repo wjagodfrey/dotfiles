@@ -7,6 +7,7 @@
 echo "Installing Homebrew kegs"
 
 brewKegs="ruby
+fortune
 fzf
 slurm
 htop

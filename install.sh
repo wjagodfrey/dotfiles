@@ -22,4 +22,4 @@ bash ./vim/install.sh
 # Install node and global npm modules
 bash ./node/install.sh
 
-echo "^^^^COMPLETE^^^^"
+echo "All done. Restart your terminal to see all changes."
