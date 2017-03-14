@@ -22,10 +22,12 @@ serverless
 markserv"
 
 command="
-~/.nvm/nvm.sh install 7.6
-~/.nvm/nvm.sh use 7.6
+bass source ~/.nvm/nvm.sh --no-use ';'\
+nvm install 7.6 ';'\
+nvm ls
 npm i -g $(echo "$npmModules" | tr '\n' ' ')
 "
 
+
 echo "Running:$command"
-bash -c "$command"
+fish -c "$command"
