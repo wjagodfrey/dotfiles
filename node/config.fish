@@ -8,4 +8,4 @@
 alias nvm="bass source ~/.nvm/nvm.sh --no-use ';' nvm"
 
 # set correct node version on shell start. defaults to nvmrc in ~
-bass source ~/.nvm/nvm.sh --no-use ';' nvm use > /dev/null
+bass source ~/.nvm/nvm.sh --no-use ';' nvm use default > /dev/null

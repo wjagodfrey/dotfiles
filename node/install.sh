@@ -24,6 +24,7 @@ markserv"
 command="
 bass source ~/.nvm/nvm.sh --no-use ';'\
 nvm install 7.6 ';'\
+nvm alias default 7.6 ';'\
 nvm ls
 npm i -g $(echo "$npmModules" | tr '\n' ' ')
 "
