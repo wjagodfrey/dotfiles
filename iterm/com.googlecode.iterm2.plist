@@ -37243,11 +37243,11 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>1130 79 599 388 0 0 1920 1177 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>769 230 796 473 0 0 1920 1200 </string>
+	<string>769 180 918 498 0 0 1920 1177 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>155 593 592 584 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 4 1919 1173 0 0 1920 1177 </string>
+	<string>0 733 1920 444 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>320 25 410 302 0 0 1920 1177 </string>
 	<key>New Bookmarks</key>
@@ -38399,7 +38399,7 @@
 			<key>Blur</key>
 			<true/>
 			<key>Blur Radius</key>
-			<real>2</real>
+			<real>8.8350360576923066</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -38830,7 +38830,7 @@
 			<key>Right Option Key Sends</key>
 			<integer>0</integer>
 			<key>Rows</key>
-			<integer>25</integer>
+			<integer>40</integer>
 			<key>Screen</key>
 			<integer>-1</integer>
 			<key>Scrollback Lines</key>
@@ -38984,7 +38984,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.68445128780850295</real>
+			<real>0.098312684911242607</real>
 			<key>Triggers</key>
 			<array/>
 			<key>Unlimited Scrollback</key>
