@@ -26,7 +26,6 @@ Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'ervandew/supertab'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'terryma/vim-expand-region'
-Plugin 'rking/ag.vim'
 Plugin 'karlbright/qfdo.vim'
 Plugin 'isRuslan/vim-es6'
 Plugin 'digitaltoad/vim-jade'
@@ -59,6 +58,12 @@ Plugin 'mikelue/vim-maven-plugin'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+
+" Searching
+Plugin 'mileszs/ack.vim'
+
+" Linting
+Plugin 'mtscout6/syntastic-local-eslint.vim'
 
 call vundle#end()
 
@@ -228,6 +233,9 @@ nmap <leader>q :bw<CR>
 " FZF
 noremap <C-p> :FZF!<CR>
 let g:fzf_source = 'find . -type f | grep -v "node_modules/"'
+
+" Ack
+let g:ackprg = 'ag'
 
 " Toggle tabbed indents
 nmap <leader>l :set list!<CR>
