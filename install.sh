@@ -5,21 +5,24 @@
 ############################
 
 # Link dotfiles
-bash ./dotfiles/install.sh
+bash ~/dotfiles/dotfiles/install.sh
 
 # Install brew kegs
-bash ./brew/install.sh
+bash ~/dotfiles/brew/install.sh
 
 # Install and launch databases
-bash ./databases/install.sh
+bash ~/dotfiles/databases/install.sh
+
+# Install powerline fonts
+bash ~/dotfiles/fonts/install.sh
 
 # Install and configure fish
-bash ./fish/install.sh
+bash ~/dotfiles/fish/install.sh
 
 # Install and configure vim
-bash ./vim/install.sh
+bash ~/dotfiles/vim/install.sh
 
 # Install node and global npm modules
-bash ./node/install.sh
+bash ~/dotfiles/node/install.sh
 
 echo "All done. Restart your terminal to see all changes."
