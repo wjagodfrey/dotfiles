@@ -39,6 +39,7 @@ Plugin 'othree/html5.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'Rykka/colorv.vim'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'tomlion/vim-solidity'
 
 " UI
 Plugin 'bling/vim-airline'
