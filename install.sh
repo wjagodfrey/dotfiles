@@ -16,9 +16,6 @@ bash ~/dotfiles/databases/install.sh
 # Install powerline fonts
 bash ~/dotfiles/fonts/install.sh
 
-# Install and configure fish
-bash ~/dotfiles/fish/install.sh
-
 # Install and configure vim
 bash ~/dotfiles/vim/install.sh
 
