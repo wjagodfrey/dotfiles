@@ -8,6 +8,10 @@ echo "Installing Homebrew kegs"
 
 brewKegs="ruby
 fortune
+mpd
+ncmpcpp
+gcc
+nethack
 fzf
 slurm
 htop
@@ -23,3 +27,5 @@ the_silver_searcher
 jq"
 
 brew install $brewKegs
+
+brew services start mpd

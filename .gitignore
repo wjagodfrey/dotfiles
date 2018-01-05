@@ -1,3 +1,17 @@
 .DS_Store
-dotfiles/vim/bundle/
-dotfiles/vim/.netrwhist
+
+# FISH
+/dotfiles/config/fish/fundle/
+/dotfiles/config/fish/fishd.*
+
+# VIM
+/dotfiles/.vim/bundle/
+/dotfiles/.vim/.netrwhist
+
+# MPD
+/dotfiles/.mpd/*
+!/dotfiles/.mpd/mpd.conf
+!/dotfiles/.mpd/playlists
+
+# VIS
+/dotfiles/config/vis/vis.log
