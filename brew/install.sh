@@ -14,6 +14,7 @@ fftw
 gcc
 nethack
 fzf
+ncurses
 slurm
 htop
 iftop

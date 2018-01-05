@@ -34,3 +34,5 @@ alias c++ c++-7
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [ -f /Users/wilfredgodfrey/.nvm/versions/node/v7.6.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish ]; and . /Users/wilfredgodfrey/.nvm/versions/node/v7.6.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish
+
+set -g fish_user_paths "/usr/local/opt/ncurses/bin" $fish_user_paths
