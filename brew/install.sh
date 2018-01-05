@@ -10,6 +10,7 @@ brewKegs="ruby
 fortune
 mpd
 ncmpcpp
+fftw
 gcc
 nethack
 fzf
