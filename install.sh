@@ -7,6 +7,9 @@
 # Link dotfiles
 bash ~/dotfiles/dotfiles/install.sh
 
+# Install cli-visualiser (vis)
+bash ~/dotfiles/vis/install.sh
+
 # Install brew kegs
 bash ~/dotfiles/brew/install.sh
 
@@ -21,8 +24,5 @@ bash ~/dotfiles/vim/install.sh
 
 # Install node and global npm modules
 bash ~/dotfiles/node/install.sh
-
-# Install cli-visualiser (vis)
-bash ~/dotfiles/vis/install.sh
 
 echo "All done. Restart your terminal to see all changes."
