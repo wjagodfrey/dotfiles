@@ -5,8 +5,8 @@
 ############################
 
 # set $PATH
-set PATH /usr/local/bin $PATH
-set PATH /usr/local/sbin $PATH
+set -x -g PATH /usr/local/bin $PATH
+set -x -g PATH /usr/local/sbin $PATH
 
 # optional local fish config file
 if test -e ~/.config.fish;
@@ -28,6 +28,9 @@ alias cc gcc-7
 alias g++ g++-7
 alias c++ c++-7
 
+set -x -g LIBRARY_PATH "/usr/local/opt/icu4c/lib:$LIBRARY_PATH"
+set -x -g CPATH "/usr/local/opt/icu4c/include:$CPATH"
+
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
 [ -f /Users/wilfredgodfrey/.nvm/versions/node/v7.6.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish ]; and . /Users/wilfredgodfrey/.nvm/versions/node/v7.6.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish
@@ -35,4 +38,4 @@ alias c++ c++-7
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [ -f /Users/wilfredgodfrey/.nvm/versions/node/v7.6.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish ]; and . /Users/wilfredgodfrey/.nvm/versions/node/v7.6.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish
 
-set -g fish_user_paths "/usr/local/opt/ncurses/bin" $fish_user_paths
+set -x -g fish_user_paths "/usr/local/opt/ncurses/bin" $fish_user_paths

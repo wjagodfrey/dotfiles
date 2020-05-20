@@ -1,0 +1,10 @@
+help copy
+rename build.fish
+search dotfiles
+rename utils
+
+touch detect_hit.h
+touch detect_hit.cpp
+delete
+open_with 
+open_with open

@@ -40,6 +40,8 @@ Plugin 'godlygeek/tabular'
 Plugin 'Rykka/colorv.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tomlion/vim-solidity'
+Plugin 'rust-lang/rust.vim'
+Plugin 'mattn/webapi-vim'
 
 " UI
 Plugin 'bling/vim-airline'
@@ -152,7 +154,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=235
 let g:netrw_liststyle=3
 
 " configure NERDTree
-let NERDTreeIgnore=['node_modules$[[dir]]', '\~$']
+let NERDTreeIgnore=['\.pyc$', '__pycache__$', 'node_modules$[[dir]]', '\~$']
 
 " Syntastic
 let g:syntastic_mode_map = { 'mode': 'passive' }
@@ -211,7 +213,7 @@ noremap <C-w> :bnext<CR>
 noremap <C-q> :bprevious<CR>
 
 " jj to exit insert mode
-inoremap jj <Esc>
+" inoremap jj <Esc>
 
 " format the entire file, using the f mark to move back to the same position
 nmap <leader>fef mfggVG=`f
@@ -278,6 +280,10 @@ noremap <Leader><Tab> :NERDTreeToggle<CR>
 " Make it easier to save with sudo
 cmap w!! w !sudo tee > /dev/null %
 
+" Rustlang
+nmap <leader>fer :RustFmt<CR>
+" let g:rustfmt_autosave = 1
+let g:rust_clip_command = 'pbcopy'
 
 " -- Scripts --
 

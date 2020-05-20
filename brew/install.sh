@@ -26,6 +26,8 @@ dos2unix
 coreutils
 aspell
 the_silver_searcher
+pipes-sh
+ranger
 jq"
 
 brew install $brewKegs

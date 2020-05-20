@@ -62,4 +62,4 @@ function backup_and_symlink_dotfiles() {
 
 backup_and_symlink_dotfiles ~/dotfiles/dotfiles ~ ~/dotfiles_old ".nvmrc .vimrc .vim .mpd .nethackrc .gitconfig .gitignore"
 
-backup_and_symlink_dotfiles ~/dotfiles/dotfiles/config ~/.config ~/.config/config_old "fish vis"
+backup_and_symlink_dotfiles ~/dotfiles/dotfiles/config ~/.config ~/.config/config_old "fish vis ranger"
